@@ -6,7 +6,7 @@ For the past 60+ days, I’ve been consistently solving problems, improving my D
 
 This journey taught me:
 ✅ Discipline matters more than motivation
-✅ Small daily improvements compound over time
+✅ Small daily improvements compound over time vbvn 
 ✅ Consistency is the real game changer
 
 Grateful to GeeksforGeeks for creating such an amazing learning platform and challenge experience.
