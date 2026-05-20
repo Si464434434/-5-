@@ -1,4 +1,19 @@
-# -5-class Solution {
+🏆 Consistency creates results. Results create confidence.
+
+Excited to receive the certificate for successfully completing the GeeksforGeeks 60 Days POTD Challenge 🚀💻
+
+For the past 60+ days, I’ve been consistently solving problems, improving my DSA skills, and pushing myself to learn something new every single day.
+
+This journey taught me:
+✅ Discipline matters more than motivation
+✅ Small daily improvements compound over time
+✅ Consistency is the real game changer
+
+Grateful to GeeksforGeeks for creating such an amazing learning platform and challenge experience.
+
+Now aiming for even bigger milestones ahead 🔥
+
+#GeeksforGeeks #GFG #DSA #Coding #Programming #ProblemSolving #CompetitiveProgramming #Cpp #Developer #Learning #Consistency #CodingJourney #StudentDeveloper #100DaysOfCode# -5-class Solution {
   public:
   
     int minSteps(vector<int>& arr, int start, int end) {
