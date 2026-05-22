@@ -4,7 +4,61 @@ Excited to receive the certificate for successfully completing the GeeksforGeeks
 
 For the past 60+ days, I’ve been consistently solving problems, improving my DSA skills, and pushing myself to learn something new every single day.
 
-This journey taught me:
+This journey taught me:#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int cntOnes(vector<vector<int>>& grid) {
+        int n = grid.size(), m = grid[0].size();
+        vector<vector<int>> vis(n, vector<int>(m, 0));
+        queue<pair<int,int>> q;
+
+        // Step 1: Add boundary 1s to queue
+        for (int i = 0; i < n; i++) {
+            for (int j : {0, m-1}) {
+                if (grid[i][j] == 1 && !vis[i][j]) {
+                    q.push({i,j});
+                    vis[i][j] = 1;
+                }
+            }
+        }
+        for (int j = 0; j < m; j++) {
+            for (int i : {0, n-1}) {
+                if (grid[i][j] == 1 && !vis[i][j]) {
+                    q.push({i,j});
+                    vis[i][j] = 1;
+                }
+            }
+        }
+
+        // Directions: up, down, left, right
+        int dx[4] = {-1,1,0,0};
+        int dy[4] = {0,0,-1,1};
+
+        // Step 2: BFS to mark all connected 1s
+        while (!q.empty()) {
+            auto [x,y] = q.front(); q.pop();
+            for (int d = 0; d < 4; d++) {
+                int nx = x + dx[d], ny = y + dy[d];
+                if (nx>=0 && nx<n && ny>=0 && ny<m && grid[nx][ny]==1 && !vis[nx][ny]) {
+                    vis[nx][ny] = 1;
+                    q.push({nx,ny});
+                }
+            }
+        }
+
+        // Step 3: Count unvisited 1s
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (grid[i][j] == 1 && !vis[i][j]) count++;
+            }
+        }
+        return count;
+    }
+};
+
 ✅ Discipline matters more than motivation
 ✅ Small daily improvements compound over time vbvn 
 ✅ Consistency is the real game changer
