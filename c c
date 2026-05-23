@@ -1,0 +1,27 @@
+class Solution {
+public:
+    // Helper function to transform tree
+    int transform(Node* root) {
+        if (root == nullptr) return 0;
+
+        // Leaf node case
+        if (root->left == nullptr && root->right == nullptr) {
+            int old_val = root->data;
+            root->data = 0;
+            return old_val;
+        }
+
+        // Recursively transform left and right subtrees
+        int left_sum = transform(root->left);
+        int right_sum = transform(root->right);
+
+        int old_val = root->data;
+        root->data = left_sum + right_sum;
+
+        return root->data + old_val;
+    }
+
+    void toSumTree(Node* root) {
+        transform(root);
+    }
+};
