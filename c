@@ -8,6 +8,7 @@ public:
             string s = to_string(num);
             string pref = "";
 
+
             for (char c : s) {
                 pref += c;
                 prefixes.insert(pref);
