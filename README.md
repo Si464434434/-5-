@@ -4,7 +4,29 @@ Excited to receive the certificate for successfully completing the GeeksforGeeks
 
 For the past 60+ days, I’ve been consistently solving problems, improving my DSA skills, and pushing myself to learn something new every single day.
 
-This journey taught me:#include <bits/stdc++.h>
+This journey taught me:#includ#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int minToggle(vector<int>& arr) {
+        int n = arr.size();
+        int totalOnes = 0;
+        for (int x : arr) if (x == 1) totalOnes++;
+
+        int leftOnes = 0, ans = INT_MAX;
+        for (int i = 0; i <= n; i++) {
+            // left side: ones to flip → 0
+            // right side: zeros to flip → 1
+            int rightZeros = (n - i) - (totalOnes - leftOnes);
+            ans = min(ans, leftOnes + rightZeros);
+
+            if (i < n && arr[i] == 1) leftOnes++;
+        }
+        return ans;
+    }
+};
+e <bits/stdc++.h>
 using namespace std;
 
 class Solution {
