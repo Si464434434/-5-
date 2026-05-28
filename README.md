@@ -4,7 +4,8 @@ Excited to receive the certificate for successfully completing the GeeksforGeeks
 
 For the past 60+ days, I’ve been consistently solving problems, improving my DSA skills, and pushing myself to learn something new every single day.
 
-This journey taught me:#includ#include <bits/stdc++.h>
+This journey taught me:#includ#include <bits/stdc++.h><img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5736da64-f23a-437a-ae92-1d359068e9c4" />
+
 using namespace std;
 
 class Solution {
